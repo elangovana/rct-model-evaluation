@@ -28,6 +28,7 @@ class PreprocessRCTIMDB:
         df = self.process(dataset_tsv_original_file, dataset_tsv_contrast_file)
         os.makedirs(os.path.dirname(output_file), exist_ok=True)
         df.to_json(output_file, orient='records')
+        return df
 
 
 def run_main():
